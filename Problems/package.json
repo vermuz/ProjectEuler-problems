@@ -1,0 +1,12 @@
+{
+  "name": "problems",
+  "version": "0.0.0",
+  "description": "Problems",
+  "main": "app.js",
+  "author": {
+    "name": "ckoski"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
