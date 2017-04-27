@@ -48,6 +48,18 @@
     <Content Include="package.json" />
     <Content Include="README.md" />
     <TypeScriptCompile Include="Problems\old.ts" />
+    <TypeScriptCompile Include="Problems\Problem1.ts" />
+    <TypeScriptCompile Include="Problems\Problem10.ts" />
+    <TypeScriptCompile Include="Problems\Problem11.ts" />
+    <TypeScriptCompile Include="Problems\Problem12.ts" />
+    <TypeScriptCompile Include="Problems\Problem2.ts" />
+    <TypeScriptCompile Include="Problems\Problem3.ts" />
+    <TypeScriptCompile Include="Problems\Problem4.ts" />
+    <TypeScriptCompile Include="Problems\Problem5.ts" />
+    <TypeScriptCompile Include="Problems\Problem6.ts" />
+    <TypeScriptCompile Include="Problems\Problem7.ts" />
+    <TypeScriptCompile Include="Problems\Problem8.ts" />
+    <TypeScriptCompile Include="Problems\Problem9.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
   </ItemGroup>
   <ItemGroup>

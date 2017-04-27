@@ -11,32 +11,32 @@
 //28: 1, 2, 4, 7, 14, 28
 //We can see that 28 is the first triangle number to have over five divisors.
 //What is the value of the first triangle number to have over five hundred divisors?
-function triangleNumber(n) {
-    let result = 0;
-    for (let i = 0; i <= n; i++) {
-        result += i;
-    }
-    return result;
-}
-function getDivisors(n) {
-    let divisors = [];
-    const upper = Math.floor(n / 2);
-    divisors.push(1);
-    for (let i = 2; i <= upper; i++) {
-        if (n % i === 0)
-            divisors.push(i);
-    }
-    divisors.push(n);
-    return divisors;
-}
-let divisors = [];
-let n = 0;
-let triangleNum = 0;
-do {
-    n++;
-    triangleNum = triangleNumber(n);
-    divisors = getDivisors(triangleNum);
-} while (divisors.length < 501);
-console.log(divisors);
-console.log(triangleNum);
+//function triangleNumber(n: number): number {
+//    let result: number = 0;
+//    for (let i = 0; i <= n; i++) {
+//        result += i;
+//    }
+//    return result;
+//}
+//function getDivisors(n: number): number[] {
+//    let divisors: number[] = [];
+//    const upper: number = Math.floor(n / 2);
+//    divisors.push(1);
+//    for (let i = 2; i <= upper; i++) {
+//        if (n % i === 0) divisors.push(i);
+//    }
+//    divisors.push(n);
+//    return divisors;
+//}
+//let divisors: number[] = [];
+//let n = 0;
+//let triangleNum = 0;
+//do {
+//    n++;
+//    triangleNum = triangleNumber(n);
+//    divisors = getDivisors(triangleNum);
+//} while (divisors.length < 501)
+//console.log(divisors);
+//console.log(triangleNum);
+var test = "hello world";
 //# sourceMappingURL=app.js.map
