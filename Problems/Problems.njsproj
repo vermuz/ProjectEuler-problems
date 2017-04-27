@@ -47,7 +47,6 @@
     <TypeScriptCompile Include="app.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <TypeScriptCompile Include="Problems\old.ts" />
     <TypeScriptCompile Include="Problems\Problem1.ts" />
     <TypeScriptCompile Include="Problems\Problem10.ts" />
     <TypeScriptCompile Include="Problems\Problem11.ts" />
