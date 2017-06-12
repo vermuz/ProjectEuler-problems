@@ -1,3 +1,3 @@
-﻿
-var test = "hello world";
+﻿var promise = new Promise(() => Problem12());
 
+promise.then(() => { });

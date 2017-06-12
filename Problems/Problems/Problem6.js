@@ -13,14 +13,14 @@ function addSquares(a, b) {
 }
 function Problem6() {
     var _ = require("underscore");
-    var bottomNum = 1;
-    var topNum = 100;
-    var numbers = _.range(bottomNum, topNum + 1);
-    var sumSquared = Math.pow(numbers.reduce(add, 0), 2);
-    var sumOfSquares = numbers.reduce(addSquares, 0);
+    const bottomNum = 1;
+    const topNum = 100;
+    let numbers = _.range(bottomNum, topNum + 1);
+    let sumSquared = Math.pow(numbers.reduce(add, 0), 2);
+    let sumOfSquares = numbers.reduce(addSquares, 0);
     console.log(sumSquared);
     console.log(sumOfSquares);
-    var difference = sumSquared - sumOfSquares;
+    let difference = sumSquared - sumOfSquares;
     console.log(difference);
 }
 //# sourceMappingURL=Problem6.js.map

@@ -25,34 +25,34 @@
 function Problem11() {
     // get the grid in proper addressable format
     function getRight(grid, x, y) {
-        var result = [];
-        for (var i = 0; i < sizeToGet; i++) {
+        let result = [];
+        for (let i = 0; i < sizeToGet; i++) {
             result.push(grid[y][x + i]);
         }
-        return result.reduce(function (a, b) { return a * b; });
+        return result.reduce((a, b) => a * b);
     }
     function getDown(grid, x, y) {
-        var result = [];
-        for (var i = y; i < y + sizeToGet; i++) {
+        let result = [];
+        for (let i = y; i < y + sizeToGet; i++) {
             result.push(grid[i][x]);
         }
-        return result.reduce(function (a, b) { return a * b; });
+        return result.reduce((a, b) => a * b);
     }
     function getDiagNW2SE(grid, x, y) {
-        var result = [];
-        for (var i = 0; i < sizeToGet; i++) {
+        let result = [];
+        for (let i = 0; i < sizeToGet; i++) {
             result.push(grid[y + i][x + i]);
         }
-        return result.reduce(function (a, b) { return a * b; });
+        return result.reduce((a, b) => a * b);
     }
     function getDiagSW2NE(grid, x, y) {
-        var result = [];
-        for (var i = 0; i < sizeToGet; i++) {
+        let result = [];
+        for (let i = 0; i < sizeToGet; i++) {
             result.push(grid[y - i][x + i]);
         }
-        return result.reduce(function (a, b) { return a * b; });
+        return result.reduce((a, b) => a * b);
     }
-    var gridStrings = [];
+    let gridStrings = [];
     gridStrings.push("08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08");
     gridStrings.push("49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00");
     gridStrings.push("81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65");
@@ -73,19 +73,19 @@ function Problem11() {
     gridStrings.push("20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16");
     gridStrings.push("20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54");
     gridStrings.push("01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48");
-    var grid = [];
-    var sizeToGet = 4;
-    for (var i = 0; i < gridStrings.length; i++) {
-        var numbers = gridStrings[i].split(" ");
-        var result = numbers.map(function (x) { return parseInt(x, 10); });
+    let grid = [];
+    const sizeToGet = 4;
+    for (let i = 0; i < gridStrings.length; i++) {
+        let numbers = gridStrings[i].split(" ");
+        let result = numbers.map((x) => parseInt(x, 10));
         grid.push(result);
     }
-    var yLastIndex = grid.length - 1;
-    var final = 0;
-    for (var y = 0; y < grid.length; y++) {
-        var xLastIndex = grid[y].length - 1;
-        for (var x = 0; x < grid[y].length; x++) {
-            var result = 0;
+    let yLastIndex = grid.length - 1;
+    let final = 0;
+    for (let y = 0; y < grid.length; y++) {
+        let xLastIndex = grid[y].length - 1;
+        for (let x = 0; x < grid[y].length; x++) {
+            let result = 0;
             // right
             if ((x + (sizeToGet - 1)) <= xLastIndex) {
                 result = getRight(grid, x, y);

@@ -5,8 +5,8 @@
 //There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 //Find the product abc.
 function Problem9() {
-    var m = 0;
-    var n = 2;
+    let m = 0;
+    let n = 2;
     do {
         m = (500 / n) - n;
         if ((m < n) && (Math.floor(m) === m)) {
@@ -15,9 +15,9 @@ function Problem9() {
         }
         n++;
     } while (true);
-    var a = Math.pow(n, 2) - Math.pow(m, 2);
-    var b = 2 * n * m;
-    var c = Math.pow(n, 2) + Math.pow(m, 2);
+    let a = Math.pow(n, 2) - Math.pow(m, 2);
+    let b = 2 * n * m;
+    let c = Math.pow(n, 2) + Math.pow(m, 2);
     console.log(a * b * c);
 }
 //# sourceMappingURL=Problem9.js.map

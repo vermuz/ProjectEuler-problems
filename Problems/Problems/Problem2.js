@@ -11,9 +11,9 @@ function fib(n) {
     }
 }
 function Problem2() {
-    var result = 0;
-    var counter = 1;
-    var sum = 0;
+    let result = 0;
+    let counter = 1;
+    let sum = 0;
     do {
         result = fib(counter);
         if (result % 2 == 0)

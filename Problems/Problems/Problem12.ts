@@ -16,15 +16,15 @@
 
 //What is the value of the first triangle number to have over five hundred divisors?
 
-function triangleNumber(n: number): number {
+async function triangleNumber(n: number): Promise<number> {
     let result: number = 0;
     for (let i = 0; i <= n; i++) {
         result += i;
     }
-    return result;
+    return new Promise<number>(r => result);
 }
 
-function getDivisors(n: number): number[] {
+async function getDivisors(n: number): Promise<number[]> {
     let divisors: number[] = [];
     const upper: number = Math.floor(n / 2);
 
@@ -33,24 +33,23 @@ function getDivisors(n: number): number[] {
         if (n % i === 0) divisors.push(i);
     }
     divisors.push(n);
-    return divisors;
+    return new Promise<number[]>(r => divisors);
 }
 
-function Problem12() {
-
+async function Problem12() {
+        
     let divisors: number[] = [];
     let n = 0;
     let triangleNum = 0;
 
     do {
         n++;
-        triangleNum = triangleNumber(n);
-        divisors = getDivisors(triangleNum);
+        triangleNum = await triangleNumber(n);
+        divisors = await getDivisors(triangleNum);
 
-    } while (divisors.length < 501)
+    } while (divisors.length <= 501)
 
     console.log(divisors);
     console.log(triangleNum);
-
 }
 
